@@ -35,20 +35,20 @@ Give yourself a grade for each question. Explain why you gave yourself that grad
 
 ### 1. Create and extend classes
 
-- Grade:
-- Explanation:
+- Grade: 4
+- Explanation: I was happy with this task
 
 ### 2. Create tests for classes
 
-- Grade:
-- Explanation:
+- Grade: 3/4
+- Explanation: I understood this and the trial and error came from wanting to create a method with an if loop.
 
 ### 3. Use HOFs from the Array prototype
 
-- Grade:
-- Explanation:
+- Grade: 3?
+- Explanation: Once I realised I needed to use two seperate functions on the array it made sense. I started off trying to do it in one step. So it took me a while, but I'm happy with how and why my solution works.
 
 ### 4. Create the reverse linked list method
 
-- Grade:
-- Explanation:
+- Grade: 2/3
+- Explanation: I sort of messed this task up. I read through the pseudocode before realising that was optional. Not sure how I missed that as it says so very clearly! I didn't have any problems at all following the pseudocode. I think I'd have got some of the way to solving this without it - the second bit of code is a sort of 'what I would have done' code.

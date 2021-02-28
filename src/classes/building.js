@@ -9,6 +9,24 @@ You should test that they exist and that they work correctly.
 You can add as many tests as you see fit.
 ------------------*/
 
-class Building {}
+class Building {
+  constructor() {
+    this.timesWindowsWashed = 0;
+    this.freeParkingSpaces = 50;
+  }
+
+  washWindows() {
+    this.timesWindowsWashed++;
+    return this.timesWindowsWashed;
+  }
+
+  carArrives(num) {
+    this.freeParkingSpaces -= num;
+    if (this.freeParkingSpaces < 0) {
+      this.freeParkingSpaces = "Insufficient parking spaces available";
+    }
+    return this.freeParkingSpaces;
+  }
+}
 
 module.exports = Building;

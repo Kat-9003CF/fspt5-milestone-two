@@ -56,17 +56,41 @@ class LinkedList {
     // And we will do this progressively with each node, till we reach the "current tail", that will become the new head
     // Your code starts here:
     // Create a variable 'node' to store the reference to this.head. This var will keep track of the "current" node as we advance on the list
-    // Create another var 'initialHead', to also point to this.head. We will need it at the end.
+    let node = this.head;
+    // Create another var 'initialHead', to also point to this.head. We will need it at the end
+    let initialHead = this.head;
     // Create a variable to store the "previous" node. Since we start at the head, "previous" should be null when initialized (because there's nothing "before" the head)
+    let prevNode = null;
     // while there is a node to visit (so, node exists)
-    // create a var to save the location of the next node, or you will lose it!!!
-    // reverse the current node's "next" pointer, it should now point to the "previous" node
-    // update previous node to be the current node
-    // update current node to the next node (you saved it) or null at end of list
-    // end of while
+    while (node) {
+      // create a var to save the location of the next node, or you will lose it!!!
+      let nextNode = node.next;
+      // reverse the current node's "next" pointer, it should now point to the "previous" node
+      node.next = prevNode;
+      // update previous node to be the current node
+      prevNode = node;
+      // update current node to the next node (you saved it) or null at end of list
+      node = nextNode;
+      // end of while
+    }
     // make the head point to what was, until now, the tail
+    this.head = this.tail;
     // make the tail point to what was initially the head
+    this.tail = initialHead;
   }
+
+  // reverseList() {
+  // let node = this.head;
+  // let head = this.head;
+  // while (node){
+  //   let prevNode = node;
+  //   let nextNode = node.next;
+  //   node.next = prevNode;
+  //   node = nextNode;
+  // }
+  // this.head = this.tail;
+  // this.tail = head;
+  // }
 }
 
 module.exports = LinkedList;

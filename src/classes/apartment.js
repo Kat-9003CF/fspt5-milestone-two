@@ -14,6 +14,20 @@ extends the Building class. Test it!
 
 const Building = require("./building");
 
-class Apartment {}
+class Apartment extends Building {
+  constructor() {
+    super();
+    this.tenants = 4;
+  }
+  moved(people, inOrOut) {
+    if (inOrOut === "out") {
+      this.tenants -= people;
+      return this.tenants;
+    } else if (inOrOut === "in") {
+      this.tenants += people;
+      return this.tenants;
+    }
+  }
+}
 
 module.exports = Apartment;
